@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Result | Image Outpainting</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+	<script type="text/css" src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+	<link rel="stylesheet" href="/static/style.css">
+	<style>
+	* {box-sizing: border-box;}
+
+	.wrapper{
+	 display: flex;
+	 flex-direction: row;
+	}
+	.container {
+	  position: relative;
+	  width: 600px;
+	  height: 600px;
+	}
+
+	.image {
+	  display: block;
+	  width: 600px;
+	  height: 600px;
+	}
+
+	.overlay {
+	  position: relative; 
+	  bottom: 0; 
+	  background: rgb(0, 0, 0);
+	  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+	  color: #f1f1f1; 
+	  width: 100%;
+	  transition: .5s ease;
+	  opacity:0;
+	  color: white;
+	  font-size: 20px;
+	  padding: 20px;
+	  width: 600px;
+	  text-align: center;
+	}
+
+	.container:hover .overlay {
+	  opacity: 1;
+	}
+	</style>
+
+</head>
+
+<body>
+	<section>
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		  <ul class="navbar-nav">
+		    <li class="nav-item active">
+		      <a class="nav-link" href="/">Home</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link" href="/about">About</a>
+		    </li>
+		  </ul>
+		</nav>
+	</section><br><br>
+
+	<h1 class="display-4 text-center text-white">Result</h1><br><br>
+	<div class="wrapper">
+	<div class="container">
+	  <img src="/static/images/{{p_img}}" style="width: 600px; height: 600px">
+	  <div class="overlay">Original Image</div>
+	</div>
+	<div class="container">
+	  <img src="/static/processed/{{p_img}}" style="width: 600px; height: 600px">
+	  <div class="overlay">Outpainted Image</div>
+	</div>
+	</div>
+
+</body>
+</html>

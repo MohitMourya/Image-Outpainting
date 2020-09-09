@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>About | Image Outpainting</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script type="text/css" src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/static/style.css">
+<style>
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  margin-bottom: 50px;
+  padding: 0 50px;
+  }
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgb(23, 32, 42);  
+  background-color: rgb(235, 245, 251);
+}
+
+.container {
+  padding: 0 16px;
+
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+h3{
+  margin-left: 35px;
+  padding-bottom: 2px;
+  color: rgb(214, 234, 248);
+}
+
+</style>
+</head>
+<body>
+<section>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+      </ul>
+    </nav>
+    <br>
+</section>
+
+<h1 class="display-4 text-white" align="center">About Project</h1><br>
+
+<h2 style="margin-left: 35px;padding-bottom: 2px; color: rgb(214, 234, 248);">What is Image Outpainting?</h3>
+<h3>Subtask of Image Inpainting. Predicting the visual context of an image beyond its boundary.</h3><br><br>
+
+<h2 style="margin-left: 35px;padding-bottom: 2px; color: rgb(214, 234, 248);">How does it work?</h3>
+<h3>We present a deep learning approach based on GANs for adversarially training a network to hallucinate past image boundaries.</h3>
+
+
+<br><br><br><br>
+<h2 class="display-4 text-white" align="center">Meet The Team</h2>
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="../static/src/mohit.jpg" alt="Mohit" style="width: 100%">
+      <div class="container">
+        <h2 align="center">Mohit Mourya</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="../static/src/aman.jpg" alt="Aman" style="width: 100%">
+      <div class="container">
+        <h2 align="center">Aman Kumar Singh</h2>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="../static/src/abinash.jpeg" alt="Abinash" style="width: 100%">
+      <div class="container">
+        <h2 align="center">Abinash Sinha</h2>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="column">
+    <div class="card">
+      <img src="../static/src/vikram.jpeg" alt="Vikram" style="width: 100%">
+      <div class="container">
+        <h2 align="center">Vikram Singh Rathore</h2>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+</body>
+</html>
