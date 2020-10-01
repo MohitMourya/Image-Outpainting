@@ -1,50 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-			<title>Home | Image Outpainting</title>
-			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-				<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-				<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-				<script type="text/css" src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
-				<link rel="stylesheet" href="/static/style.css">
-				</head>
-				<body>
-					<section>
-						<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-						  <ul class="navbar-nav">
-						    <li class="nav-item active">
-						      <a class="nav-link" href="#">Home</a>
-						    </li>
-						    <li class="nav-item">
-						      <a class="nav-link" href="/about">About</a>
-						    </li>
-						  </ul>
-						</nav>
-						<div class="container p-5">
-							<div class="row mb-5 text-center text-white">
-								<div class="col-lg-10 mx-auto">
-									<h1 class="display-4">Image Outpainting</h1>
-									<br>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-lg-5 mx-auto">
-									<div class="p-5 bg-white shadow rounded-lg">
-										<img src="https://nc-img.com/uxteam/lc.simple-pages/nclabs-business-card-maker/img/upload-logo.cc0a0cdf.svg" alt="" width="200" class="d-block mx-auto mb-4 rounded-pill">
-											<h6 class="text-center mb-4 text-muted"> Upload your Image</h6>
-											<form method="post" action="{{ url_for('upload') }}" enctype="multipart/form-data">
-												<div class="custom-file overflow-hidden rounded-pill mb-5">
-													<input id="image" type="file" accept=".jpg, .png, .jpeg" name="image" class="custom-file-input rounded-pill" required>
-														<label for="image" id="fLabel" class="custom-file-label rounded-pill">Choose file</label>
-													</div>
-													<input type="submit" id="submit" class="btn btn-primary btn-block">
-													</form>
-												</div>
-											</div>
-										</div>
-									</div>
-								</section>
-								<script type="text/javascript">$('#image').change(function(){$('#fLabel')[0].innerText=$('#image')[0].files[0].name;});</script>
-							</body>
-						</html>
+<head>
+    <meta charset="UTF-8">
+    <title>Home | Image Outpainting</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script type="text/css"
+            src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<section>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container p-5">
+        <div class="row mb-5 text-center text-white">
+            <div class="col-lg-10 mx-auto">
+                <h1 class="display-4">Image Outpainting</h1>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 mx-auto">
+                <div class="p-5 bg-white shadow rounded-lg">
+                    <img src="https://nc-img.com/uxteam/lc.simple-pages/nclabs-business-card-maker/img/upload-logo.cc0a0cdf.svg"
+                         alt="" width="200" class="d-block mx-auto mb-4 rounded-pill">
+                    <h6 class="text-center mb-4 text-muted"> Upload your Image</h6>
+                    <form method="post" action="{{ url_for('upload') }}" enctype="multipart/form-data">
+                        <div class="custom-file overflow-hidden rounded-pill mb-5">
+                            <input id="image" type="file" accept=".jpg, .png, .jpeg" name="image"
+                                   class="custom-file-input rounded-pill" required>
+                            <label for="image" id="fLabel" class="custom-file-label rounded-pill">Choose file</label>
+                        </div>
+                        <input type="submit" id="submit" class="btn btn-primary btn-block">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+    $('#image').change(function () {
+        $('#fLabel')[0].innerText = $('#image')[0].files[0].name;
+    });
+</script>
+</body>
+</html>
